@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anabranch"
+version = "0.1.0"
+description = "Non-intrusive disk cache for scientific computing workflows — async branching for instant recall"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Wenyin Wei", email = "wenyin.wei.ww@gmail.com"},
+]
+keywords = ["cache", "scientific-computing", "workflow", "memoization", "hpc", "async", "anabranch"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: System :: Distributed Computing",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+hdf5 = ["h5py>=3.0"]
+all = ["h5py>=3.0"]
+
+[project.urls]
+Homepage = "https://github.com/WenyinWei/anabranch"
+Repository = "https://github.com/WenyinWei/anabranch"
+Issues = "https://github.com/WenyinWei/anabranch/issues"
+
+[tool.setuptools.packages.find]
+include = ["anabranch*"]
